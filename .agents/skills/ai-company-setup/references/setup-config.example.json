@@ -1,0 +1,14 @@
+{
+  "workspaceName": "taiyo-ai-company",
+  "destinationRoot": "/Users/kimurataiyou/taiyo-gyomu/ai-company",
+  "companySlug": "kimura-taiyo",
+  "businessSlug": "consulting",
+  "ownerName": "木村 太陽",
+  "ownerEmail": "4869nanataitai@gmail.com",
+  "migrationMode": "COPY_ONLY",
+  "language": "ja",
+  "sourcePaths": [
+    "/Users/kimurataiyou/taiyo-gyomu/.codex/brain-ichiaisyain",
+    "/Users/kimurataiyou/taiyo-gyomu/invoices"
+  ]
+}

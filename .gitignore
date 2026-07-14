@@ -1,0 +1,7 @@
+# Never commit raw source dumps or large media
+ai-company/05-raw-data/
+**/brain-ichiaisyain/
+**/*.mp4
+**/*.mov
+.DS_Store
+.obsidian/

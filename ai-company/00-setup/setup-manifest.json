@@ -1,0 +1,18 @@
+{
+  "workspaceName": "taiyo-ai-company",
+  "destinationRoot": "/Users/kimurataiyou/taiyo-gyomu/ai-company",
+  "companySlug": "kimura-taiyo",
+  "businessSlug": "consulting",
+  "migrationMode": "COPY_ONLY",
+  "language": "ja",
+  "sourcePaths": [
+    "/Users/kimurataiyou/taiyo-gyomu/.codex/brain-ichiaisyain",
+    "/Users/kimurataiyou/taiyo-gyomu/invoices",
+    "/Users/kimurataiyou/Downloads/AGICAMP12"
+  ],
+  "stagedPaths": {
+    "agicamp12": "/Users/kimurataiyou/taiyo-gyomu/ai-company/05-raw-data/agicamp12",
+    "brain-ichiaisyain": "/Users/kimurataiyou/taiyo-gyomu/ai-company/05-raw-data/brain-ichiaisyain"
+  },
+  "inventoryReport": "/Users/kimurataiyou/taiyo-gyomu/.codex/agicamp12/INVENTORY.md"
+}
