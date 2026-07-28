@@ -1,0 +1,24 @@
+version: 1
+project:
+  name: "ai-company"
+  test_command: "python3 scripts/test_claw_empire_setup.py"
+  repo: "nanameru/ai-company"
+
+source_roots:
+  - .agents/skills/ai-company-setup
+  - ai-company/00-setup
+  - ai-company/03-AI_departments
+  - scripts
+
+cases:
+  - id: TC-001
+    title: "既存共有版へClaw-Empireを非上書きで追加できる"
+    feature: "AI COMPANY部署可視化"
+    scenario: "新規初期化と既存bootstrapで汎用3部署・3キャラクターを準備する"
+    status: done
+    priority: high
+    type: integration
+    source: [.agents/skills/ai-company-setup, ai-company/00-setup/claw-empire]
+    test_file: "scripts/test_claw_empire_setup.py"
+    issues: [1]
+    notes: "Codex / Claude Code選択、既存routing非上書き、3部署・3キャラクター変換、個人情報・secret非混入を確認済み。"

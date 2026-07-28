@@ -14,6 +14,7 @@
 |---------|------|
 | `ai-company/` | OpenClaw 型 AI 会社ワークスペース本体（ルール・部署・セットアッププロンプト・既存ナレッジ） |
 | `skills/ai-company-setup/` | 対話式セットアップ Skill（Interview / Deep Research / テンプレ展開） |
+| `ai-company/00-setup/claw-empire/` | 部署とキャラクターをピクセルオフィスへ同期する可視化 |
 
 ---
 
@@ -92,6 +93,19 @@ Cursor / Claude Code では `~/.agents/skills/` またはプロジェクト内 `
 | 最初の AI 社員起動 | `ai-company/00-setup/FIRST_EMPLOYEE_PROMPT.md` |
 | 本格構築 | `ai-company/00-setup/BUILD_PROMPT.md` |
 | 7 部署キックオフ | `ai-company/00-setup/SEVEN_DEPT_KICKOFF.md` |
+| 部署GUIのセットアップ | `ai-company/00-setup/claw-empire/CLAW_EMPIRE_SETUP.md` |
+
+## Claw-Empireによる部署可視化
+
+`ai-company/` へ移動して実行します。
+
+```bash
+bash 00-setup/claw-empire/install-claw-empire.sh \
+  --company-root "$PWD" \
+  --provider codex
+```
+
+Claude Codeを使う場合は `--provider claude` に変更します。事業部はGUIの部屋、配下の機能部門はキャラクターとして表示されます。
 
 ---
 

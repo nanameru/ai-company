@@ -166,5 +166,24 @@ BUILD_AI_DEPARTMENTS: true
 """
 (setup_dir / "BUILD_PROMPT.md").write_text(build_prompt)
 
+claw_source = Path(skill_dir) / "assets" / "claw-empire"
+claw_destination = setup_dir / "claw-empire"
+if claw_source.is_dir():
+    shutil.copytree(claw_source, claw_destination, dirs_exist_ok=True)
+    for executable in ["install-claw-empire.sh", "sync-claw-empire.mjs"]:
+        target = claw_destination / executable
+        if target.exists():
+            target.chmod(target.stat().st_mode | 0o111)
+    routing_template = claw_source / "company-routing.template.json"
+    routing_target = root / "03-AI_departments/company-routing.json"
+    if routing_template.exists() and not routing_target.exists():
+        shutil.copy2(routing_template, routing_target)
+
+gitignore_path = root / ".gitignore"
+gitignore_text = gitignore_path.read_text() if gitignore_path.exists() else ""
+if ".ai-company-local/" not in gitignore_text.splitlines():
+    separator = "" if not gitignore_text or gitignore_text.endswith("\n") else "\n"
+    gitignore_path.write_text(f"{gitignore_text}{separator}.ai-company-local/\n")
+
 print(str(root))
 PY

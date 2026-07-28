@@ -85,6 +85,8 @@ Interview または Deep Research 完了後、`setup-config.json` を書く:
 
 Run `scripts/init-ai-company.sh` with JSON config（新規）または `scripts/bootstrap-v2-template.sh --dest <path>`（既存へ v2 追記）。
 
+生成先の `00-setup/claw-empire/` には、無料OSSのClaw-EmpireとAI COMPANY部署を同期する汎用セットアップを含む。Codex CLI / Claude Codeを選択でき、利用者固有設定は `.ai-company-local/` へ分離する。
+
 ### Step 3 — Stage raw data
 
 If `sourcePaths` exist, run `scripts/stage-raw-data.sh`.
@@ -181,6 +183,14 @@ From repo root:
 - 原本はコピーのみ（`migrationMode: COPY_ONLY` デフォルト）
 - 秘密・APIキー・口座情報を config やログに書かない
 - 日本語でユーザーと会話。コミットメッセージは英語
+
+## Claw-Empire部署GUI
+
+- 手順: `{destinationRoot}/00-setup/claw-empire/CLAW_EMPIRE_SETUP.md`
+- 正本: `{destinationRoot}/03-AI_departments/company-routing.json`
+- 事業部はGUI部署、配下の機能部門はキャラクターとして同期
+- 新しい機能部門は `watch` 中のGUIへ自動追加
+- 正本から外れたキャラクターは削除せず `offline`
 
 ## Construction Prompt Source
 
