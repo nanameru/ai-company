@@ -2,36 +2,24 @@
   "schema_version": "1",
   "company": {
     "name": "AI Company",
-    "mission": "AI社員が役割を分担し、安全に成果を届ける"
+    "mission": "最初の3人が順番に仕事を進め、安全に成果を届ける"
   },
   "divisions": {
-    "product-development": {
-      "nameJa": "プロダクト開発",
-      "purpose": "顧客課題を使えるプロダクトへ変える",
+    "starter-team": {
+      "nameJa": "AI COMPANY",
+      "purpose": "最初の仕事を受付、制作、品質確認の順で進める",
       "departments": {
-        "product-team": {
-          "nameJa": "プロダクトチーム",
-          "purpose": "要件、設計、実装、検証を担当する"
-        }
-      }
-    },
-    "growth-marketing": {
-      "nameJa": "グロースマーケティング",
-      "purpose": "価値を発信し、需要と改善材料へ変える",
-      "departments": {
-        "growth-team": {
-          "nameJa": "グロースチーム",
-          "purpose": "顧客理解、発信、計測、改善を担当する"
-        }
-      }
-    },
-    "shared-services": {
-      "nameJa": "共通サービス",
-      "purpose": "ナレッジ、品質、運用、安全境界を共通提供する",
-      "departments": {
-        "operations-team": {
-          "nameJa": "運用チーム",
-          "purpose": "ナレッジ、QA、運用、案内を担当する"
+        "ceo-pm": {
+          "nameJa": "CEO・PM",
+          "purpose": "目的、優先順位、完了条件を整理する"
+        },
+        "production-dev": {
+          "nameJa": "制作・開発",
+          "purpose": "承認された要件に沿って成果物を作る"
+        },
+        "qa": {
+          "nameJa": "品質確認",
+          "purpose": "要件、安全性、品質、出力を確認する"
         }
       }
     }

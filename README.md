@@ -105,7 +105,9 @@ bash 00-setup/claw-empire/install-claw-empire.sh \
   --provider codex
 ```
 
-Claude Codeを使う場合は `--provider claude` に変更します。事業部はGUIの部屋、配下の機能部門はキャラクターとして表示されます。
+Claude Codeを使う場合は `--provider claude` に変更します。初期状態は1つの `AI COMPANY` ルームに、`CEO・PM` / `制作・開発` / `品質確認` の3人だけを表示します。
+
+Product / Growth / Shared Servicesへ分けたい場合だけ、`ai-company/00-setup/claw-empire/company-routing.three-divisions.example.json` を参考にします。高度な専門部署は共有版へ含めません。
 
 ---
 

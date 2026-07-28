@@ -55,7 +55,11 @@ class ClawEmpireSetupTest(unittest.TestCase):
                     encoding="utf-8"
                 )
             )
-            self.assertEqual(len(routing["divisions"]), 3)
+            self.assertEqual(len(routing["divisions"]), 1)
+            self.assertEqual(
+                list(routing["divisions"]["starter-team"]["departments"]),
+                ["ceo-pm", "production-dev", "qa"],
+            )
             self.assertIn(".ai-company-local/", (destination / ".gitignore").read_text())
 
             result = subprocess.run(
@@ -87,10 +91,10 @@ class ClawEmpireSetupTest(unittest.TestCase):
             )
             self.assertEqual(
                 json.loads(directory.stdout),
-                {"divisions": 3, "characters": 3, "provider": "codex"},
+                {"divisions": 1, "characters": 3, "provider": "codex"},
             )
             self.assertIn(
-                '"nameJa": "プロダクトチーム"',
+                '"nameJa": "CEO・PM"',
                 (destination / "03-AI_departments/company-routing.json").read_text(
                     encoding="utf-8"
                 ),

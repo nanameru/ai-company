@@ -188,7 +188,9 @@ From repo root:
 
 - 手順: `{destinationRoot}/00-setup/claw-empire/CLAW_EMPIRE_SETUP.md`
 - 正本: `{destinationRoot}/03-AI_departments/company-routing.json`
-- 事業部はGUI部署、配下の機能部門はキャラクターとして同期
+- 初期状態は1部屋と `CEO・PM` / `制作・開発` / `品質確認` の3人
+- Product / Growth / Shared Servicesは任意サンプルとして用意し、初期状態では使わない
+- 高度な専門部署は共有版へ含めない
 - 新しい機能部門は `watch` 中のGUIへ自動追加
 - 正本から外れたキャラクターは削除せず `offline`
 

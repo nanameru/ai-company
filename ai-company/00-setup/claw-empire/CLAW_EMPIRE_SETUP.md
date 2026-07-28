@@ -2,13 +2,14 @@
 
 AI COMPANYの組織を、無料OSSのClaw-Empireへ同期します。
 
-## 対応関係
+## 初期構成
 
-- `company-routing.json` の事業部 → GUIの部署
-- 事業部配下の機能部門 → ピクセルキャラクター
-- 部門の `purpose` → キャラクターの説明
+- GUIの部屋: `AI COMPANY`
+- キャラクター: `CEO・PM` / `制作・開発` / `品質確認`
 
 新しい部門を `company-routing.json` に追加すると、`watch` 実行中のGUIへ自動追加されます。正本から外れたキャラクターは自動削除せず `offline` にします。
+
+高度な専門部署は初期状態へ含めません。運用が安定した後に3事業部へ分けたい場合だけ、`company-routing.three-divisions.example.json` を参考に編集します。
 
 ## 1コマンドセットアップ
 
