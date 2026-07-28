@@ -1,0 +1,27 @@
+{
+  "schema_version": "1",
+  "company": {
+    "name": "AI Company",
+    "mission": "最初の3人が順番に仕事を進め、安全に成果を届ける"
+  },
+  "divisions": {
+    "starter-team": {
+      "nameJa": "AI COMPANY",
+      "purpose": "最初の仕事を受付、制作、品質確認の順で進める",
+      "departments": {
+        "ceo-pm": {
+          "nameJa": "CEO・PM",
+          "purpose": "目的、優先順位、完了条件を整理する"
+        },
+        "production-dev": {
+          "nameJa": "制作・開発",
+          "purpose": "承認された要件に沿って成果物を作る"
+        },
+        "qa": {
+          "nameJa": "品質確認",
+          "purpose": "要件、安全性、品質、出力を確認する"
+        }
+      }
+    }
+  }
+}

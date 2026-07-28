@@ -1,0 +1,7 @@
+{
+  "companyRoot": "../..",
+  "routingPath": "03-AI_departments/company-routing.json",
+  "officeUrl": "http://127.0.0.1:8790/",
+  "watchIntervalMs": 1500,
+  "defaultProvider": "codex"
+}

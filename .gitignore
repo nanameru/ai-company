@@ -5,3 +5,4 @@ ai-company/05-raw-data/
 **/*.mov
 .DS_Store
 .obsidian/
+.ai-company-local/

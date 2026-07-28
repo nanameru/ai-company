@@ -1,0 +1,39 @@
+{
+  "schema_version": "1",
+  "company": {
+    "name": "AI Company",
+    "mission": "AI社員が役割を分担し、安全に成果を届ける"
+  },
+  "divisions": {
+    "product-development": {
+      "nameJa": "プロダクト",
+      "purpose": "顧客課題を使えるプロダクトへ変える",
+      "departments": {
+        "product-team": {
+          "nameJa": "プロダクト担当",
+          "purpose": "要件、制作、実装、検証を担当する"
+        }
+      }
+    },
+    "growth-marketing": {
+      "nameJa": "グロース",
+      "purpose": "価値を発信し、需要と改善材料へ変える",
+      "departments": {
+        "growth-team": {
+          "nameJa": "グロース担当",
+          "purpose": "顧客理解、発信、計測、改善を担当する"
+        }
+      }
+    },
+    "shared-services": {
+      "nameJa": "共通サービス",
+      "purpose": "ナレッジ、品質、運用、安全境界を共通提供する",
+      "departments": {
+        "operations-team": {
+          "nameJa": "共通業務担当",
+          "purpose": "ナレッジ、QA、運用、案内を担当する"
+        }
+      }
+    }
+  }
+}

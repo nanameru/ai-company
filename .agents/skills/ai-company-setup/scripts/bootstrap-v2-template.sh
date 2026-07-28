@@ -67,4 +67,30 @@ write_if_missing "$ROOT/03-AI_departments/Marketing Department/content-brain/kno
 touch "$ROOT/02-company_knowledge/source-assets/.gitkeep" 2>/dev/null || true
 touch "$ROOT/03-AI_departments/Marketing Department/content-brain/output/archive/.gitkeep" 2>/dev/null || true
 
+CLAW_SOURCE="$(cd "$SCRIPT_DIR/.." && pwd)/assets/claw-empire"
+if [[ -d "$CLAW_SOURCE" ]]; then
+  mkdir -p "$ROOT/00-setup/claw-empire"
+  for source in "$CLAW_SOURCE"/*; do
+    target="$ROOT/00-setup/claw-empire/$(basename "$source")"
+    if [[ ! -e "$target" ]]; then
+      cp "$source" "$target"
+      echo "created: $target"
+    else
+      echo "skip (exists): $target"
+    fi
+  done
+  chmod +x \
+    "$ROOT/00-setup/claw-empire/install-claw-empire.sh" \
+    "$ROOT/00-setup/claw-empire/sync-claw-empire.mjs" 2>/dev/null || true
+  if [[ ! -f "$ROOT/03-AI_departments/company-routing.json" ]]; then
+    cp "$CLAW_SOURCE/company-routing.template.json" "$ROOT/03-AI_departments/company-routing.json"
+    echo "created: $ROOT/03-AI_departments/company-routing.json"
+  fi
+fi
+
+if [[ ! -f "$ROOT/.gitignore" ]] || ! grep -Fxq ".ai-company-local/" "$ROOT/.gitignore"; then
+  printf '%s\n' ".ai-company-local/" >> "$ROOT/.gitignore"
+  echo "updated: $ROOT/.gitignore"
+fi
+
 echo "bootstrap complete: $ROOT"
